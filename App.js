@@ -11,7 +11,7 @@ const fetchSchedule = async () => {
 };
 
 const Banner = ({title}) => (
-  <Text style={styles.bannerStyle}>{title || '[loading...]'}</Text>
+  <Text contentContainerProp={styles.bannerStyle}>{title || '[loading...]'}</Text>
 );
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
   }, []);
   
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView contentContainerProp={styles.container}>
       <Banner title={schedule.title} />
       <CourseList courses={schedule.courses} />
     </SafeAreaView>
